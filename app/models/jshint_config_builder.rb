@@ -1,10 +1,8 @@
 class JshintConfigBuilder < ConfigBuilder
+  pattr_initialize :hound_config
+
   def self.for(hound_config)
     new(hound_config).config
-  end
-
-  def initialize(hound_config)
-    @hound_config = hound_config
   end
 
   def config
